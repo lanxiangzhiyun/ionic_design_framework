@@ -1,8 +1,3 @@
-/**
- * Created by fanghui on 2016/4/1.
- */
-'use strict';
-
 export function ensureRange(v, v1, v2) {
   if (v < v1) return v1;
   if (v > v2) return v2;
