@@ -1,0 +1,9 @@
+module.exports = "<ion-modal-view> <div class=\"bar bar-header bar-light\" style=height:{{pos1header_height}}px;position:static> <button class=\"button button-clear\" ng-click=cancelImage() style=\"border:1px solid #ddd;width:45px;font-size:14px\">取消</button> <div class=title> <div class=product_top> <div class=\"background logo\"></div> <div class=product_goods_border></div> <span class=product_goods_title_text>裁剪</span> </div> </div> <button class=\"button button-clear\" ng-click=rotateRight() style=width:34px;position:absolute;right:52px><i class=\"icon ion-refresh try_icon-color\"></i></button> <button class=\"button button-clear\" ng-click=saveImage() style=\"border:1px solid #ddd;width:45px;font-size:14px\">完成</button> </div> <div style=height:{{pos1bh}}px> <div id=modal-container style=margin-left:{{pos1marginw}}px;margin-top:{{pos1marginh}}px;position:relative>  <canvas id=img style=\"width:{{pos1rw}}px;height:{{pos1rh}}px;position:absolute\"/> <div style=position:absolute;left:0;top:0;width:{{pos1cl}}px;height:{{pos1rh}}px;opacity:.5;background:gray;z-index:1></div> <div style=position:absolute;right:0;top:0;width:{{pos1rw-pos1cw-pos1cl}}px;height:{{pos1rh}}px;opacity:.5;background:gray;z-index:1></div> <div style=position:absolute;left:0;top:0;width:{{pos1rw}}px;height:{{pos1ct}}px;opacity:.5;background:gray;z-index:1></div> <div style=position:absolute;left:0;top:{{pos1ct+pos1ch}}px;width:{{pos1rw}}px;height:{{pos1rh-pos1ct-pos1ch}}px;opacity:.5;background:gray;z-index:1></div> <div id=cutBox style=position:absolute;left:{{pos1cl}}px;top:{{pos1ct}}px;width:{{pos1cw}}px;height:{{pos1ch}}px;z-index:1></div>    </div> </div> <img id=origin-img hidden> </ion-modal-view>";
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./templates/modal-clip-image.html
+ ** module id = 61
+ ** module chunks = 0
+ **/

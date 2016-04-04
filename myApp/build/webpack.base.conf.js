@@ -28,8 +28,8 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        loader: 'babel!eslint',
+        test: /\.js(x)?$/,
+        loader: 'babel?presets[]=react,presets[]=es2015',
         exclude: /node_modules/
       },
       {
@@ -49,9 +49,6 @@ module.exports = {
         }
       }
     ]
-  },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
   },
   postcss: function () {
     return [autoprefixer, precss];

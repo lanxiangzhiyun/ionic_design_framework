@@ -1,0 +1,9 @@
+module.exports = "<ion-view> <ion-nav-bar class=\"bar bar-header bar-light\"> <ion-nav-title> <div class=product_top> <img src=" + require("../img/xumu.jpg") + " height=30 class=\"xumu\"/> <div class=product_goods_border></div> <span class=product_goods_title_text>产品</span> </div> </ion-nav-title> </ion-nav-bar> <ion-content class=\"order_bg lens_product\"> <div class=row ng-repeat=\"pair in pairs\" style=padding-bottom:13px> <div class=product_goods_area ng-if=pair[0] ng-click=\"epjGo('/lfull/lens/'+pair[0].id)\"> <div class=product_goods_img style=height:{{try.width*.4}}px;line-height:{{try.width*.4}}px> <img ng-src={{pair[0].pic}}>  </div> <p class=product_goods_name>{{pair[0].name}}</p> <p class=product_goods_name style=color:#888>已售出:{{pair[0].sold}}片</p> </div> <div class=product_goods_area ng-if=pair[1] ng-click=\"epjGo('/lfull/lens/'+pair[1].id)\"> <div class=product_goods_img style=height:{{try.width*.4}}px;line-height:{{try.width*.4}}px> <img ng-src={{pair[1].pic}}>  </div> <p class=product_goods_name>{{pair[1].name}}</p> <p class=product_goods_name style=color:#888>已售出:{{pair[0].sold}}片</p> </div> </div> </ion-content> </ion-view>";
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./lens/ltab-product.html
+ ** module id = 37
+ ** module chunks = 0
+ **/

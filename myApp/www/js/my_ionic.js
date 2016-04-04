@@ -208,7 +208,7 @@ angular.module('my-ionic', [])
       }
     }
   }])
-  .directive('MyTab', [
+  .directive('myTab', [
     '$compile',
     '$ionicConfig',
     '$ionicBind',
@@ -221,7 +221,7 @@ angular.module('my-ionic', [])
       }
       return {
         restrict: 'E',
-        require: ['^ionTabs', 'epjTab'],
+        require: ['^ionTabs', 'myTab'],
         controller: '$ionicTab',
         scope: true,
         compile: function(element, attr) {
@@ -229,7 +229,7 @@ angular.module('my-ionic', [])
           //We create the tabNavTemplate in the compile phase so that the
           //attributes we pass down won't be interpolated yet - we want
           //to pass down the 'raw' versions of the attributes
-          var tabNavTemplate = '<epj-tab-nav' +
+          var tabNavTemplate = '<my-tab-nav' +
             attrStr('ng-click', attr.ngClick) +
             attrStr('title', attr.title) +
             attrStr('icon', attr.icon) +
@@ -240,7 +240,7 @@ angular.module('my-ionic', [])
             attrStr('hidden', attr.hidden) +
             attrStr('disabled', attr.disabled) +
             attrStr('class', attr['class']) +
-            '></epj-tab-nav>';
+            '></my-tab-nav>';
 
           //Remove the contents of the element so we can compile them later, if tab is selected
           var tabContentEle = document.createElement('div');
@@ -374,7 +374,7 @@ angular.module('my-ionic', [])
         }
       };
     }])
-  .directive('MyTabNav', [function() {
+  .directive('myTabNav', [function() {
     return {
       restrict: 'E',
       replace: true,
