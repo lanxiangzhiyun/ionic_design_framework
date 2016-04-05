@@ -1,0 +1,9 @@
+module.exports = "<ion-view> <style>#dealer_list p{margin-bottom:5px}#dealer_list .list{margin-top:10px}#dealer_list .dealer_list_title{padding:10px;background:#fff;font-size:15px;font-weight:600;border-top:1px solid #ddd}#dealer_list .item-content{padding:10px}#dealer_list .dealer_list_title span{float:right;font-size:12px;font-weight:100}#dealer_list .dealer_list_title span b{color:#1170BE}</style><ion-nav-bar class=\"bar bar-header bar-light\"> <ion-nav-title class=product_top> <div class=product_top> <div class=\"background logo\"></div> <div class=product_goods_border></div> <span class=product_goods_title_text>经销商</span> </div> </ion-nav-title> </ion-nav-bar> <ion-content class=order_bg> <ion-list id=dealer_list ng-repeat=\"dl in dealers\"> <div class=dealer_list_title>申请人<span>状态：<b>{{statusShow(dl.dealer_status)}}</b></span></div> <ion-item> <p>姓名：{{dl.receiver_name}}</p> <p>电话：{{dl.receiver_phone}}</p> <p>地址：{{dl.receiver_address}}</p> <ion-option-button class=button-balanced ng-click=\"setStatus(dl,'pass')\">通过</ion-option-button> <ion-option-button class=button-assertive ng-click=\"setStatus(dl,'reject')\">拒绝</ion-option-button> </ion-item> </ion-list> </ion-content> </ion-view>";
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./saas/stab-dealer.html
+ ** module id = 43
+ ** module chunks = 0
+ **/

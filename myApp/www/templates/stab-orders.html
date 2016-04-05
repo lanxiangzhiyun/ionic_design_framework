@@ -1,0 +1,9 @@
+module.exports = "<ion-view> <ion-nav-bar class=\"bar bar-header bar-light\"> <ion-nav-title class=product_top> <div class=product_top> <div class=\"background logo\"></div> <div class=product_goods_border></div> <span class=product_goods_title_text>订单</span> </div> </ion-nav-title> </ion-nav-bar> <ion-content class=order_bg> <div class=\"button-bar bar-light\" style=padding-top:10px;padding-bottom:10px> <div class=button ng-click=\"filterBy('paid')\" style=\"{{state=='paid'?'background-color: #ddd;color: #fff;':''}}\">待处理</div> <div class=button ng-click=\"filterBy('all')\" style=\"{{state=='all'?'background-color: #ddd;color: #fff;':''}}\">全部</div> </div> <div ng-if=!orders.length style=text-align:center>暂无{{state=='paid'?'待处理':''}}订单</div> <ion-list class=sf_list ng-repeat=\"order in orders\" ng-click=\"epjGo('/sfull/order-detail/'+order.id)\"> <div class=sf_list_title>订单号：{{order.sn}}<span>{{order.status|orderStatusSupply}}</span></div> <ion-item> <p>经&nbsp;&nbsp;销&nbsp;&nbsp;商：{{order.user_name}}</p> <p>联系电话：{{order.user_phone}}</p> <p ng-if=order.pay_method>付款方式：{{order.pay_method}}</p> <p ng-if=order.ship_company>快递公司：{{order.ship_company}}</p> <p>下单时间：{{order.create_time}}</p> <ion-option-button ng-if=\"subapp()=='stab' && getOp(order)\" class=button-balanced ng-click=changeState(order,order.status,$event)>{{getOp(order)}}</ion-option-button> </ion-item> <div class=sf_list_foot> 订单金额：<span>￥{{order.total_price}}</span>&nbsp;&nbsp;共 <span>{{order.total_glasses}}</span>&nbsp;副 </div> </ion-list> </ion-content> </ion-view>";
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./saas/stab-orders.html
+ ** module id = 45
+ ** module chunks = 0
+ **/

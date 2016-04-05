@@ -28,8 +28,8 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        loader: 'babel!eslint',
+        test: /\.js(x)?$/,
+        loader: 'babel?presets[]=react,presets[]=es2015',
         exclude: /node_modules/
       },
       {
@@ -38,7 +38,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css!postcss-loader'
+        loader: 'style!css?minimize!postcss-loader',
+
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -50,10 +51,7 @@ module.exports = {
       }
     ]
   },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
-  },
   postcss: function () {
-    return [autoprefixer, precss];
+    return [autoprefixer, precss,require('postcss-nested'),require("postcss-calc"),require("css-scss"),require("postcss-mixins")];
   }
 }

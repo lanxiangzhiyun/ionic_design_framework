@@ -1,0 +1,9 @@
+module.exports = "<ion-view> <ion-nav-bar class=\"bar bar-header bar-light\"> <ion-nav-title class=product_top> <div class=product_top style=\"margin:0 auto\"> <div class=\"background logo\"></div> <div class=product_goods_border></div> <span class=product_goods_title_text>明星相片</span> </div> </ion-nav-title> </ion-nav-bar> <ion-nav-buttons side=left> <button class=\"button button-clear\" ng-click=epjBack()> <i class=\"icon ion-ios-arrow-back\"></i> </button> </ion-nav-buttons> <ion-content> <ion-list> <div ng-repeat=\"py in pinyins\"> <div class=\"item item-divider\">{{py}} </div> <div ng-repeat=\"star in stars[py]\" ng-click=showStar(star); class=\"item item-content\">{{star}}</div> </div> </ion-list> </ion-content> </ion-view>";
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./templates/full-star.html
+ ** module id = 58
+ ** module chunks = 0
+ **/

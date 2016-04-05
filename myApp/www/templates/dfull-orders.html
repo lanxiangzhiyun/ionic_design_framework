@@ -1,0 +1,9 @@
+module.exports = "<ion-view> <ion-nav-bar class=\"bar bar-header bar-light\"> <ion-nav-title class=product_top> <div class=product_top style=\"margin:0 auto\"> <div class=\"background logo\"></div> <div class=product_goods_border></div> <span class=product_goods_title_text>订单列表</span> </div> </ion-nav-title> </ion-nav-bar> <ion-nav-buttons side=right> <button ng-if=!user.user_phone class=\"button button-clear\" ng-click=login()> 绑定 </button> </ion-nav-buttons> <div class=scan> <div class=scan_btn ng-click=\"epjGo('/dfull/chart')\">购物车</div> </div> <ion-content class=\"order_bg ss_orders\"> <div class=list ng-repeat=\"order in suOrders\" ng-click=\"epjGo('/dfull/order-detail/'+order.id)\"> <div class=sf_list_title>订单号：{{order.sn}} <span>{{order.status|orderStatusSupply}}</span> </div> <div class=item> <p>经&nbsp;&nbsp;销&nbsp;&nbsp;商：{{order.user_name}}</p> <p>联系电话：{{order.user_phone}}</p> <p ng-if=order.pay_method>支付方式：{{order.pay_method}}</p> <p ng-if=order.ship_company>快递公司：{{order.ship_company}}</p> <p>下单时间：{{order.create_time}}</p> </div> <div class=sf_list_foot> 订单金额：<span>￥{{order.total_price}}</span>&nbsp;&nbsp;共 <span>{{order.total_glasses}}</span>&nbsp;副 </div> </div> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> </ion-content> </ion-view>";
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./saas/dfull-orders.html
+ ** module id = 40
+ ** module chunks = 0
+ **/

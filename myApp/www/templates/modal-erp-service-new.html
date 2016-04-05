@@ -1,0 +1,9 @@
+module.exports = "<ion-modal-view> <style>.item input{padding-top:0;padding-left:10px}.item input:nth-child(2){background:0 0}.item select{right:auto;padding:0;direction:ltr;width:90%;margin-left:15px}</style><ion-header-bar class=\"bar bar-header bar-light\"> <div class=\"title product_top\"> <div class=\"background logo\"></div> <div class=product_goods_border></div> <span class=product_goods_title_text>新增</span> </div> <div class=\"button button-small\" id=close_modal ng-click=erpModal.hide();>关闭</div> </ion-header-bar> <ion-content> <div class=list> <label class=\"item item-input\"> <span>企业名称</span> <input type=text ng-model=erpService.corp placeholder=请输入企业名称> </label> <label class=\"item item-input\"> <span>所在城市</span> <input type=text ng-model=erpService.city placeholder=企业所在的城市> </label> <label class=\"item item-input\"> <span>服务时间</span> <input type=text id=date ng-model=erpService.order_time placeholder=上门服务的时间> </label> <label class=\"item item-input\"> <span>服务人员</span> <input type=text ng-model=erpService.staff placeholder=上门服务人员的姓名> </label> <label class=\"item item-input\"> <span>服务地址</span> <input type=text ng-model=erpService.address placeholder=要服务的企业所在地址> </label> <div class=\"item item-select\"> <span>企业规模</span> <select ng-model=erpService.corp_size> <option>100人以下</option> <option>100-300人</option> <option>300-500人</option> <option>500-1000人</option> <option>1000-10000人</option> <option>10000人以上</option> </select> </div> <div class=\"item item-select\"> <span>上门服务方式</span> <select ng-model=erpService.serve_type> <option>办公室/会议间</option> <option>楼内大厅</option> <option>楼下露天</option> <option>其他</option> </select> </div> <div class=row> <button class=\"button button-block button-calm\" ng-click=submit(erpService)>提交</button> </div> </div> </ion-content> </ion-modal-view>";
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./templates/modal-erp-service-new.html
+ ** module id = 62
+ ** module chunks = 0
+ **/

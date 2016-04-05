@@ -1,0 +1,9 @@
+module.exports = "<ion-view> <ion-nav-bar class=\"bar bar-header bar-light\"> <ion-nav-title class=product_top> <div class=product_top> <div class=\"background logo\"></div> <div class=product_goods_border></div> <span class=product_goods_title_text>库存</span> </div> </ion-nav-title> </ion-nav-bar> <ion-content class=\"order_bg sf_stock\"> <div class=list ng-repeat=\"gd in gds\" ng-click=\"epjGo('/sfull/product/'+gd.id)\"> <div class=row> <div class=all_img_center> <img ng-src={{gd.img_detail_0}} width=\"100\"/> </div> <div class=col> <p>{{gd.name}}</p> <p>参考价：<span>￥{{gd.shop_price}}</span></p> <p>订货价：<span>￥{{gd.shop_price}}</span></p> <p>库存：{{gd.ss_stock}}</p> </div> </div> </div> </ion-content> </ion-view>";
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./saas/stab-stocks.html
+ ** module id = 46
+ ** module chunks = 0
+ **/

@@ -1,9 +1,9 @@
-<ion-view view-title="Account">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
-  </ion-content>
-</ion-view>
+module.exports = "<ion-view> <ion-nav-bar class=\"bar bar-header bar-light\"> <ion-nav-title class=product_top> <div class=product_top style=\"margin:0 auto\"> <div class=\"background logo\"></div> <div class=product_goods_border></div> <span class=product_goods_title_text>个人设置</span> </div> </ion-nav-title> </ion-nav-bar> <ion-content class=order_bg> <ion-refresher pulling-text=下拉刷新 on-refresh=doRefresh()></ion-refresher> <div class=list style=margin-bottom:10px> <div class=\"row row-center\"> <img class=product_account_user_img ng-src={{userinfo.headimgurl}}> </div> <p style=text-align:center>{{userinfo.nickname}}</p> <div class=\"row row-center\" style=\"padding:0;border-bottom:1px solid #C5C5C5;margin-left:-8px\"> <div class=\"new_icon phone\"></div> <div ng-if=user.user_phone><input type=text ng-model=user.user_phone disabled=disabled class=product_account_user_phone style=height:17px;line-height:0;display:-webkit-inline-box></div> <div ng-if=!user.user_phone><span ng-click=login() class=product_account_click>立即绑定</span></div> </div> </div> <div class=product_account_select> <div class=\"row product_relative_new\" ng-click=\"epjGo('/full/account-my')\"> <div class=\"new_icon my\"></div> <div class=product_account_select_text>我的资料</div> <div class=product_account_select_icon> <div class=\"new_icon icon_right\"></div> </div> </div> <div class=product_border></div> <div class=\"row product_relative_new\" ng-click=\"epjGo('/full/account-order')\"> <div class=\"new_icon my_order\"></div> <div class=product_account_select_text>我的订单</div> <div class=product_account_select_icon> <div class=\"new_icon icon_right\"></div> </div> </div> <div class=product_border></div> <div class=\"row product_relative_new\" ng-click=\"epjGo('/full/account-glass')\"> <div class=\"new_icon my_glass\"></div> <div class=product_account_select_text>我的���镜</div> <div class=product_account_select_icon> <div class=\"new_icon icon_right\"></div> </div> </div> <div class=product_border></div> <div class=\"row product_relative_new\" ng-click=\"epjGo('/full/about')\"> <div class=\"new_icon about\"></div> <div class=product_account_select_text>关于我们</div> <div class=product_account_select_icon> <div class=\"new_icon icon_right\"></div> </div> </div> </div> </ion-content> </ion-view>";
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./templates/tab-account.html
+ ** module id = 70
+ ** module chunks = 0
+ **/
