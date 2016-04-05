@@ -1067,4 +1067,3 @@ angular.module('starter.controllers', [])
     $scope.order_id = $stateParams.id
     $scope.order = NErpOrder.get({id: $scope.order_id})
   })
-
