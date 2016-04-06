@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
   .controller('IndexCtrl', function($scope,$rootScope,$location,SvrShare,UserService,LensPrice,WishGoods,$http,CouponService,ChartLens) {
     console.log("IndexCtrl called: url:", location.href, ' path: ', $location.path(), ' search:', $location.search());
-    debugger;
+    //debugger;
     SvrShare.setupSharedFuncs();
     var test = $location.search().test || localStorage.test || location.host != 'epeijing.cn';
     if (test) {
@@ -27,7 +27,7 @@ angular.module('starter.controllers', [])
         if (isWeixin()) {
           return redirectOAuth($rootScope.entryPoint, config.app_id);
         }
-        alert('请在微信中打开');
+        console.log('请在微信中打开');
         return;
       }
       if (isWeixin() && $location.path() != entry) { //微信支付连接的限制与苹果上的url不变化导致了必须从指定的入口url进入,极其恶心的东西

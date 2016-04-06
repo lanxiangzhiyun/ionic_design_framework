@@ -3,6 +3,7 @@ var express = require('express')
 var webpack = require('webpack')
 var config = require('./webpack.dev.conf')
 var favicon = require('express-favicon')
+var api = require('./routes/api');
 
 var app = express()
 var compiler = webpack(config)
@@ -16,7 +17,7 @@ app.use(favicon(path.join(__dirname, '../favicon.ico')))
 app.use(require('connect-history-api-fallback')())
 
 // serve webpack bundle output
-  app.use(require('webpack-dev-middleware')(compiler, {
+app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
 }))
@@ -24,6 +25,9 @@ app.use(require('connect-history-api-fallback')())
 // enable hot-reload and state-preserving
 // compilation error display
 app.use(require('webpack-hot-middleware')(compiler))
+
+// 总路由
+app.use('/api', api);
 
 app.listen(8000, '127.0.0.1', function(err) {
   if (err) {
