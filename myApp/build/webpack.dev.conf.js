@@ -11,7 +11,7 @@ config.entry.app = [
   config.entry.app
 ]
 
-config.output.publicPath = '/'
+config.output.publicPath = '/static/'
 
 config.plugins = (config.plugins || []).concat([
   new webpack.optimize.OccurenceOrderPlugin(),

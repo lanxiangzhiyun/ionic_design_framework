@@ -13,6 +13,9 @@ app.use('/templates', express.static(path.join(__dirname, '../www/templates')))
 app.use('/lib', express.static(path.join(__dirname, '../www/lib')))
 
 app.use(favicon(path.join(__dirname, '../favicon.ico')))
+
+// 总路由
+app.use('/api', api);
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())
 
@@ -25,9 +28,6 @@ app.use(require('webpack-dev-middleware')(compiler, {
 // enable hot-reload and state-preserving
 // compilation error display
 app.use(require('webpack-hot-middleware')(compiler))
-
-// 总路由
-app.use('/api', api);
 
 app.listen(8000, '127.0.0.1', function(err) {
   if (err) {
