@@ -4,7 +4,7 @@
   "author": "",
   "scripts": {
     "main": "node index.js",
-    "dev": "node build/dev-server.js",
+    "dev": "supervisor -i www build/dev-server.js",
     "build": "rimraf dist && webpack --progress --hide-modules --config build/webpack.prod.conf.js"
   },
   "devDependencies": {
@@ -42,6 +42,7 @@
     "postcss-mixins": "^4.0.1",
     "postcss-nested": "^1.0.0",
     "precss": "^1.4.0",
+    "reload": "^0.7.0",
     "rimraf": "^2.5.0",
     "sprintf": "^0.1.5",
     "style-loader": "^0.12.3",

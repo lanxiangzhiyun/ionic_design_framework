@@ -11,7 +11,7 @@ config.entry.app = [
   config.entry.app
 ]
 
-config.output.publicPath = '/static/'
+config.output.publicPath = '/'
 
 config.plugins = (config.plugins || []).concat([
   new webpack.optimize.OccurenceOrderPlugin(),
@@ -30,7 +30,10 @@ config.plugins = (config.plugins || []).concat([
     {
       host: '127.0.0.1',
       port: 8080,
+      open: false,
+      ui: false,
       proxy: 'http://127.0.0.1:8000/',
+      files: ['www/templates/**'],
       logConnections: false,
       notify: false
     },
