@@ -399,5 +399,63 @@ router.get('/table/n_goods2', function(req, res) {
     }]
   );
 });
+router.get('/table/n_goods2/:id', function(req, res) {
+  //console.log(req);
+  console.log(req.params);
+  res.json({
+      "id": 1275,
+      "sn": "S579-C12",
+      "on_sale": 1,
+      "shop_price": 799,
+      "market_price": 1158,
+      "name": "1275",
+      "img_thumb": "http://epeijing.cn/epj_images/goods_images/S579-C12.thumb.jpg",
+      "img_face": "http://epeijing.cn/epj_images/goods_images/S579-C12.png",
+      "img_leg": "http://epeijing.cn/epj_images/goods_images/S579-C12-.png",
+      "description": null,
+      "upper_left_x": null,
+      "upper_left_y": 64,
+      "lower_left_x": null,
+      "lower_left_y": 81,
+      "upper_right_x": null,
+      "upper_right_y": 65,
+      "lower_right_x": null,
+      "lower_right_y": 81,
+      "category": "799",
+      "color": null,
+      "style": null,
+      "glass_width": null,
+      "leg_length": null,
+      "nose_width": null,
+      "create_time": "2016-01-24 18:29:58",
+      "update_time": "2016-01-27 00:47:59",
+      "img_detail_0": "http://epeijing.cn/epj_images/goods_images/S579-C12.0.jpg",
+      "img_detail_1": "http://epeijing.cn/epj_images/goods_images/S579-C12.glass_1.jpg",
+      "img_detail_2": "http://epeijing.cn/epj_images/goods_images/S579-C12.glass_2.jpg",
+      "img_detail_3": null,
+      "img_detail_4": null,
+      "img_detail_5": null,
+      "leg_y1": 45,
+      "leg_y2": 65,
+      "zone": "799",
+      "model_0": null,
+      "model_1": null,
+      "model_2": null,
+      "model_3": null,
+      "model_4": null,
+      "recommend": 1,
+      "saled": 0,
+      "stock": 1,
+      "ss_stock": 100,
+      "brand": null,
+      "link_url": null,
+      "seller": "-",
+      "try_owner": null,
+      "face_origin": null,
+      "leg_origin": null,
+      "try_desc": null
+    }
+  );
+});
 
 module.exports = router;

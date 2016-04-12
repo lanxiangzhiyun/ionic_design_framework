@@ -355,6 +355,7 @@ angular.module('starter.controllers', [])
 
   })
   .controller('TryCtrl', function($scope,$rootScope,SvrShare,$stateParams,NGoods2,$location, $timeout,$http) {
+    debugger;
     console.log('TryCtrl called');
     $scope.from = $location.search()['from-url'];
     var hback = $scope.historyBack = function() { location.href = $scope.from; };
@@ -364,7 +365,7 @@ angular.module('starter.controllers', [])
     $rootScope.current = NGoods2.get({id:$stateParams.goods_id||632}, function(){
       $rootScope.showResult && $rootScope.showResult();
     });
-    $('#face').attr('src', $rootScope.getLocal('faceImage') || 'img/modal2.jpg');
+    $('#face').attr('src', $rootScope.getLocal('faceImage') || 'static/img/modal2.jpg');
     $rootScope.showResult = SvrShare.setupShowResult($scope);
     $rootScope.showResult(true);
     var file1 =document.getElementById('faceUpload');

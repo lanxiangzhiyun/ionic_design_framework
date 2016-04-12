@@ -28,11 +28,10 @@ config.plugins = (config.plugins || []).concat([
   new BrowserSyncPlugin(
     // BrowserSync options
     {
-      host: '127.0.0.1',
       port: 8080,
       open: false,
       ui: false,
-      proxy: 'http://127.0.0.1:8000/',
+      proxy: 'http://172.16.77.129:8000/',
       files: ['www/templates/**'],
       logConnections: false,
       notify: false
