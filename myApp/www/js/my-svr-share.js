@@ -256,6 +256,8 @@ angular.module('mySvrShare', ['restService'])
 
           function glassReady() {
             debugger;
+            //alert($scope.try.width);
+            //alert($scope.try.width);
             var gpng = $scope.gpng;
             var lpng = $scope.lpng;
             var canvas = $scope.canvas || document.getElementById("glass");

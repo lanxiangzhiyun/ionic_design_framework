@@ -174,7 +174,7 @@ angular.module('my-ionic', [])
         }
         $rootScope.redirect = function (url) {
           console.log('redirect to ', url);
-          location.href = '/api/wx/redirect?url='+encodeURIComponent(url);
+          location.href = 'http://'+config.product_host+'/api/wx/redirect?url='+encodeURIComponent(url);
           console.log('after redirect. should not be seen');
         };
         $rootScope.epjGo = function (path, search) {

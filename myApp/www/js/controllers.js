@@ -13,12 +13,37 @@ angular.module('starter.controllers', [])
     if (rec) {
       localStorage.prec = rec;
     }
+
+    $rootScope.calSize = function (e) {
+      var doc = $(document);
+      var hs = doc.height();
+      if (hs <= 50 && $rootScope.try) return;
+      var header_height = 45;
+      var bottom_height = 0;
+      $rootScope.try = {
+        doc_height: hs,
+        width: doc.width(),
+        header_height: header_height,
+        bottom_height: bottom_height,
+        height: hs - header_height - bottom_height,
+      };
+      console.log('calSize: ', $rootScope.try, ' e ', e);
+      if (e) $rootScope.$apply();
+      if ($rootScope.showResult) {
+        $rootScope.showResult();
+      }
+    };
+    window.addEventListener('resize', $rootScope.calSize, false);
+    $rootScope.calSize();
+
     var entry = '/full/pay';
     //split by ? to handle /corp/?from=single#/full/product-detail/633
     $rootScope.entryPoint = location.href.split('#')[0].split('?')[0] + '#' + entry;
     if (!$location.search()['from-url']) {
       var userinfo = $location.search().userinfo || localStorage.userinfo;
       console.log('userinfo: ', userinfo);
+      alert(location.href);
+      alert(JSON.stringify(userinfo));
       if (!userinfo || userinfo.length < 200) { //for last version
         if ($location.path() && $location.path() != entry) {
           $rootScope.setLocal('lastPage', $location.path()); // save last page, go there when oauth finished
@@ -49,27 +74,6 @@ angular.module('starter.controllers', [])
       return Math.round(p * 100) / 100;
     }
     $rootScope.clipImage = SvrShare.setupClipImage($scope);
-    $rootScope.calSize = function (e) {
-      var doc = $(document);
-      var hs = doc.height();
-      if (hs <= 50 && $rootScope.try) return;
-      var header_height = 45;
-      var bottom_height = 0;
-      $rootScope.try = {
-        doc_height: hs,
-        width: doc.width(),
-        header_height: header_height,
-        bottom_height: bottom_height,
-        height: hs - header_height - bottom_height,
-      };
-      console.log('calSize: ', $rootScope.try, ' e ', e);
-      if (e) $rootScope.$apply();
-      if ($rootScope.showResult) {
-        $rootScope.showResult();
-      }
-    };
-    window.addEventListener('resize', $rootScope.calSize, false);
-    $rootScope.calSize();
     UserService.init($rootScope.wx_id).then(function () {
       console.log('in user service init cb');
       var rec = $location.search().rec;
